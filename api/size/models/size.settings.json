@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sizes",
+  "info": {
+    "name": "Kích thước",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

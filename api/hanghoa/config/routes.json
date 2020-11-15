@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hanghoas",
+      "handler": "hanghoa.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hanghoas/count",
+      "handler": "hanghoa.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hanghoas/:id",
+      "handler": "hanghoa.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hanghoas",
+      "handler": "hanghoa.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hanghoas/:id",
+      "handler": "hanghoa.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hanghoas/:id",
+      "handler": "hanghoa.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

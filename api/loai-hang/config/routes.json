@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/loai-hangs",
+      "handler": "loai-hang.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/loai-hangs/count",
+      "handler": "loai-hang.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/loai-hangs/:id",
+      "handler": "loai-hang.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/loai-hangs",
+      "handler": "loai-hang.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/loai-hangs/:id",
+      "handler": "loai-hang.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/loai-hangs/:id",
+      "handler": "loai-hang.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

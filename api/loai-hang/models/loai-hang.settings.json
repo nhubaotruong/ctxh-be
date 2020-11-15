@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loai_hangs",
+  "info": {
+    "name": "Loại hàng",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "colors": {
+      "collection": "color"
+    },
+    "sizes": {
+      "collection": "size"
+    },
+    "sexes": {
+      "collection": "sexes"
+    },
+    "hang_hoas": {
+      "via": "loai_hang",
+      "collection": "hanghoa"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

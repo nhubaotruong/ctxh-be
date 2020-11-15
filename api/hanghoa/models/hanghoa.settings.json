@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hanghoas",
+  "info": {
+    "name": "Hàng hóa",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "price": {
+      "type": "string",
+      "regex": "[0-9.,]+",
+      "default": "0",
+      "required": true,
+      "unique": false
+    },
+    "color": {
+      "model": "color"
+    },
+    "size": {
+      "model": "size"
+    },
+    "sex": {
+      "model": "sexes"
+    },
+    "loai_hang": {
+      "model": "loai-hang",
+      "via": "hang_hoas"
+    },
+    "ammount_cs1": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "ammount_cs2": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
